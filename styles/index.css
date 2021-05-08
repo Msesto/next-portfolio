@@ -1,4 +1,37 @@
 @tailwind base;
+* {
+  @apply box-border;
+}
+
+html,
+body {
+  @apply min-h-screen;
+}
+
+@keyframes BGgradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+#__next {
+  /* @apply flex flex-col; */
+  @apply text-white;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #000, #333, #111, #333, #000);
+  background-size: 200% 200%;
+  animation: BGgradient 14s ease-in-out infinite;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+}
 
 /* Write your own custom base styles here */
 
