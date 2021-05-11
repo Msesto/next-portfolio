@@ -51,18 +51,18 @@ const Contact = () => {
           <p className={cn`ml-4 leading-none font-light text-sm`}>If the form isn't working, email me at: <span className={cn`select-all cursor-pointer`}><em>sesto@outlook.com</em></span></p>
           <form className={cn`items-center flex flex-col`} onSubmit={handleOnSubmit}>
             <div className={cn`w-2/3 flex-shrink-0 mt-2`}>
-              <label className={cn`mt-2 md:mt-12 block`}>Email address:</label>
-              <input className={cn`md:mt-1 text-gray-700 p-2 rounded w-full`} type="email" name="email" placeholder="JuanDoe@example.com" required={true} />
+              <label className={cn`mt-12 block text-lg font-medium`}>Email address:</label>
+              <input className={cn`text-lg md:mt-1 text-gray-700 p-2 rounded w-full`} type="email" name="email" placeholder="JuanDoe@example.com" required={true} />
             </div>
             <div className={cn` w-2/3 flex-shrink-0 mt-2`}>
-              <label className={cn`mt-2 md:mt-6 block`}>Name:</label>
-              <input className={cn`md:mt-1 text-gray-700 p-2 rounded w-full`} type="text" name="name" placeholder="Juan Doe" required={true} />
+              <label className={cn`mt-6 block text-lg font-medium`}>Name:</label>
+              <input className={cn`text-lg md:mt-1 text-gray-700 p-2 rounded w-full`} type="text" name="name" placeholder="Juan Doe" required={true} />
             </div>
             <div className={cn`w-2/3 flex-shrink-0 mt-2`}>
-              <label className={cn`mt-2 md:mt-6 block`}>Message:</label>
-              <textarea className={cn`md:mt-1 text-gray-700 mb-1 md:mb-4 h-24 p-2 rounded w-full`} name="message" placeholder="Enter your message"></textarea>
+              <label className={cn`mt-6 block text-lg font-medium`}>Message:</label>
+              <textarea className={cn`text-lg md:mt-1 text-gray-700 mb-1 md:mb-4 h-24 p-2 rounded w-full`} name="message" placeholder="Enter your message"></textarea>
             </div>
-            <button className={cn`p-1 w-1/3 text-3xl font-light text-black rounded-md bg-yellow-500 mt-2`} type="submit" disabled={serverState.submitting}>
+            <button className={cn`p-2 w-1/3 text-2xl md:text-4xl font-medium text-black rounded-md bg-yellow-500 mt-6`} type="submit" disabled={serverState.submitting}>
               Submit
             </button>
             {serverState.status && (<p className={!serverState.status.ok ? "errorMsg" : ""}>{serverState.status.msg}</p>)}
