@@ -3,6 +3,7 @@ import axios from "axios"
 import cn from "classnames"
 import Layout from "../components/layout"
 import Container from '../components/container'
+import Head from 'next/head'
 
 interface IStatus {
   submitting: boolean;
@@ -45,6 +46,9 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Head>
+          <title> Contact Form </title>
+      </Head>
       <Container>
         <section className={cn``}>
           <h3 className={cn`mt-6 leading-tight text-3xl`}>Submit a contact form</h3>
