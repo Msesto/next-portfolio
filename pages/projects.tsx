@@ -1,6 +1,6 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroProject from '../components/hero-project'
+import Hero from '../components/hero'
 import ProjectIntro from '../components/project-intro'
 import Layout from '../components/layout'
 import { getAllProjects } from '../lib/api'
@@ -12,9 +12,8 @@ type Props = {
   allProjects: Project[]
 }
 
-const Index = ({ allProjects }: Props) => {
+const Projects = ({ allProjects }: Props) => {
   const heroProject = allProjects[0]
-  console.log(heroProject)
   const moreProjects = allProjects.slice(1)
   return (
     <>
@@ -25,11 +24,12 @@ const Index = ({ allProjects }: Props) => {
         <Container>
           <ProjectIntro />
           {heroProject && (
-            <HeroProject
+            <Hero
               title={heroProject.title}
               coverImage={heroProject.coverImage}
               date={heroProject.date}
               author={heroProject.author}
+              preSlug={`projects`}
               slug={heroProject.slug}
               excerpt={heroProject.excerpt}
             />
@@ -41,7 +41,7 @@ const Index = ({ allProjects }: Props) => {
   )
 }
 
-export default Index
+export default Projects
 
 export const getStaticProps = async () => {
   const allProjects = getAllProjects([

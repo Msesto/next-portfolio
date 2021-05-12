@@ -10,26 +10,28 @@ type Props = {
   date: string
   excerpt: string
   author: Author
+  preSlug: string
   slug: string
 }
 
-const HeroPost = ({
+const Hero = ({
   title,
   coverImage,
   date,
   excerpt,
   author,
+  preSlug,
   slug,
 }: Props) => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+        <CoverImage title={title} src={coverImage} slug={slug} preSlug={preSlug} />
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <Link as={`/${preSlug}/${slug}`} href={`/${preSlug}/[slug]`}>
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
@@ -46,4 +48,4 @@ const HeroPost = ({
   )
 }
 
-export default HeroPost
+export default Hero

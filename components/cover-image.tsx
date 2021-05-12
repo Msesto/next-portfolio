@@ -4,10 +4,11 @@ import Link from 'next/link'
 type Props = {
   title: string
   src: string
+  preSlug?: string
   slug?: string
 }
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, slug, preSlug }: Props) => {
   const image = (
     <img
       src={src}
@@ -20,7 +21,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+        <Link as={`/${preSlug}/${slug}`} href={`/${preSlug}/[slug]"`}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

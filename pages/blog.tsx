@@ -1,6 +1,6 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
+import Hero from '../components/hero'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
@@ -24,11 +24,12 @@ const Index = ({ allPosts }: Props) => {
         <Container>
           <Intro />
           {heroPost && (
-            <HeroPost
+            <Hero
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}
               author={heroPost.author}
+              preSlug={`posts`}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />
