@@ -2,6 +2,9 @@ module.exports = {
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {
+      margin: {
+        '-21': '-92px',
+       },
       colors: {
         'accent-1': '#333',
         'accent-2': '#222',

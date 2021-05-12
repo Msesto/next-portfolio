@@ -3,10 +3,11 @@
   @apply box-border;
 }
 
-html,
+/* html,
 body {
-  @apply min-h-screen;
-}
+  @apply overflow-visible;
+} */
+/* @apply min-h-screen; */
 
 @keyframes BGgradient {
   0% {

@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className={cn`md:w-9/12 md:mx-auto mt-3 flex-shrink-0 flex flex-no-wrap justify-around`}>
+      <footer className={cn`md:w-9/12 md:mx-auto mt-6 flex-shrink-0 flex flex-no-wrap justify-around`}>
         <a href="https://twitter.com/11Sesto"><FaTwitterSquare className={cn`${[rIcons, twitter]}`} /></a>
         <a href="https://github.com/Msesto"><FaGithubSquare className={cn`${rIcons}`} /> </a>
         <a href="https://www.hackerrank.com/sesto?hr_r=1"><FaHackerrank className={cn`${[rIcons, hRank]}`} /></a>
