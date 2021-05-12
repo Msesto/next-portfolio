@@ -22,7 +22,7 @@ const Index = ({ allPosts }: Props) => {
           <title> {NAME}'s Blog </title>
         </Head>
         <Container>
-          <Intro />
+          <Intro title="Blog." subtitle="A place for random, completely unreleated, technology filled blogs." />
           {heroPost && (
             <Hero
               title={heroPost.title}

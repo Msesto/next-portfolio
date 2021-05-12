@@ -1,7 +1,7 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import Hero from '../components/hero'
-import ProjectIntro from '../components/project-intro'
+import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllProjects } from '../lib/api'
 import Head from 'next/head'
@@ -22,7 +22,7 @@ const Projects = ({ allProjects }: Props) => {
           <title> {NAME}'s Projects</title>
         </Head>
         <Container>
-          <ProjectIntro />
+          <Intro title="Projects." subtitle="My own, presentable, programming projects, some open source, a few not." />
           {heroProject && (
             <Hero
               title={heroProject.title}

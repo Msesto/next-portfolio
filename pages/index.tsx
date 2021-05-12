@@ -12,6 +12,7 @@ const Index = () => {
           <title> {NAME}'s Portfolio</title>
         </Head>
         <Container>
+          <Intro title="Me." subtitle="HOOMAN" />
           <h1>Hi</h1>
         </Container>
       </Layout>
