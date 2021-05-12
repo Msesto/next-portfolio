@@ -1,20 +1,21 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
+import HeroProject from '../components/hero-project'
+import ProjectIntro from '../components/project-intro'
 import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
+import { getAllProjects } from '../lib/api'
 import Head from 'next/head'
 import { NAME } from '../lib/constants'
-import Post from '../types/post'
+import Project from '../types/project'
 
 type Props = {
-  allPosts: Post[]
+  allProjects: Project[]
 }
 
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+const Index = ({ allProjects }: Props) => {
+  const heroProject = allProjects[0]
+  console.log(heroProject)
+  const moreProjects = allProjects.slice(1)
   return (
     <>
       <Layout>
@@ -22,18 +23,18 @@ const Index = ({ allPosts }: Props) => {
           <title> {NAME}'s Projects</title>
         </Head>
         <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+          <ProjectIntro />
+          {heroProject && (
+            <HeroProject
+              title={heroProject.title}
+              coverImage={heroProject.coverImage}
+              date={heroProject.date}
+              author={heroProject.author}
+              slug={heroProject.slug}
+              excerpt={heroProject.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {moreProjects.length > 0 && <MoreStories posts={moreProjects} />}
         </Container>
       </Layout>
     </>
@@ -43,7 +44,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const allProjects = getAllProjects([
     'title',
     'date',
     'slug',
@@ -53,6 +54,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: { allProjects },
   }
 }
