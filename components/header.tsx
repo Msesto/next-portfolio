@@ -6,9 +6,8 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 const navigation = [
-  { name: 'About', href: '/', current: true },
+  { name: 'About', href: '/', current: false },
   { name: 'Projects', href: '/projects', current: false },
-  { name: 'Technologies', href: '/technologies', current: false },
   { name: 'Resume', href: '/resume', current: false },
   { name: 'Blog', href: '/blog', current: false },
   { name: 'Contact', href: '/contact', current: false },
@@ -24,7 +23,7 @@ export default function Example() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <>
+        <Fragment>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -87,7 +86,7 @@ export default function Example() {
               ))}
             </div>
           </Disclosure.Panel>
-        </>
+        </Fragment>
       )}
     </Disclosure>
   )
