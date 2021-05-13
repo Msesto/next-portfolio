@@ -40,7 +40,6 @@ const Project = ({ project, moreProjects, preview }: Props) => {
                 title={project.title}
                 coverImage={project.coverImage}
                 date={project.date}
-                author={project.author}
               />
               <PostBody content={project.content} />
             </article>
@@ -64,7 +63,6 @@ export async function getStaticProps({ params }: Params) {
     'title',
     'date',
     'slug',
-    'author',
     'content',
     'ogImage',
     'coverImage',

@@ -19,7 +19,6 @@ const MoreStories = ({ posts, preSlug }: Props) => {
             title={post.title}
             coverImage={post.coverImage}
             date={post.date}
-            author={post.author}
             preSlug={preSlug}
             slug={post.slug}
             excerpt={post.excerpt}

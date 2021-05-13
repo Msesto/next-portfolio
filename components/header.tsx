@@ -42,7 +42,7 @@ export default function Example() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block md:hidden h-12 w-auto"
-                    src="/assets/blog/authors/ms.png"
+                    src="/assets/ms.png"
                     alt="Martin Sesto's Logo"
                   />
                 <h2 className="hidden md:block text-3xl">MARTIN<strong>SESTO</strong></h2>

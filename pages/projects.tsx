@@ -28,7 +28,6 @@ const Projects = ({ allProjects }: Props) => {
               title={heroProject.title}
               coverImage={heroProject.coverImage}
               date={heroProject.date}
-              author={heroProject.author}
               preSlug={`projects`}
               slug={heroProject.slug}
               excerpt={heroProject.excerpt}
