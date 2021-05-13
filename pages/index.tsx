@@ -13,7 +13,6 @@ const Index = () => {
         </Head>
         <Container>
           <Intro title="Me." subtitle="HOOMAN" />
-          <h1>Hi</h1>
         </Container>
       </Layout>
     </>
