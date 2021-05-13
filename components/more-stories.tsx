@@ -3,9 +3,10 @@ import Post from '../types/post'
 
 type Props = {
   posts: Post[]
+  preSlug: string
 }
 
-const MoreStories = ({ posts }: Props) => {
+const MoreStories = ({ posts, preSlug }: Props) => {
   return (
     <section>
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
@@ -19,6 +20,7 @@ const MoreStories = ({ posts }: Props) => {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            preSlug={preSlug}
             slug={post.slug}
             excerpt={post.excerpt}
           />

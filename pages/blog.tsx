@@ -34,7 +34,7 @@ const Index = ({ allPosts }: Props) => {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} preSlug={`posts`}/>}
         </Container>
       </Layout>
     </>

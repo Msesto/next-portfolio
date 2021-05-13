@@ -34,7 +34,7 @@ const Projects = ({ allProjects }: Props) => {
               excerpt={heroProject.excerpt}
             />
           )}
-          {moreProjects.length > 0 && <MoreStories posts={moreProjects} />}
+          {moreProjects.length > 0 && <MoreStories preSlug={`projects`} posts={moreProjects} />}
         </Container>
       </Layout>
     </>
