@@ -18,9 +18,7 @@ const Resume = () => {
   const B :string[] = ["Tech Stack!"]
   const C :string[] = ["Education!"]
 
-  const base = `px-6 py-3 w-1/2 w-auto justify-center 
-  justify-start border-b-2 title-font font-medium inline-flex items-center 
-  leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`
+  const base = `px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`
   
   return (
     <>
