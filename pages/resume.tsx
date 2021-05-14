@@ -4,6 +4,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Head from 'next/head'
 import { NAME } from '../lib/constants'
+import cn from "classnames"
 
 const maperinho = (el:string[]) => {
   return(
@@ -18,7 +19,7 @@ const Resume = () => {
   const B :string[] = ["Tech Stack!"]
   const C :string[] = ["Education!"]
 
-  const base = `px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`
+  const base = cn(`px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`)
   
   return (
     <>
@@ -31,13 +32,13 @@ const Resume = () => {
           <section>
             <div className="container px-5 py-16 mx-auto flex flex-wrap flex-col">
               <div className="flex mx-auto mb-10">
-                <a onClick={()=>setSection(0)} className={useSection == 0 ? base + ' border-yellow-500 bg-black text-yellow-500' : base}>
+                <a onClick={()=>setSection(0)} className={useSection == 0 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base}>
                     <p className='pl-2 inline-flex'>Experience</p>
                 </a>
-                <a onClick={()=>setSection(1)} className={useSection == 1 ? base + ' border-yellow-500 bg-black text-yellow-500' : base}>
+                <a onClick={()=>setSection(1)} className={useSection == 1 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base}>
                     <p className='pl-2 inline-flex'>Tecnology</p>
                 </a>
-                <a onClick={()=>setSection(2)} className={useSection == 2 ? base + ' border-yellow-500 bg-black text-yellow-500' : base}>
+                <a onClick={()=>setSection(2)} className={useSection == 2 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base}>
                     <p className='pl-2 inline-flex'>Education</p>
                 </a>
               </div>
