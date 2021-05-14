@@ -31,7 +31,7 @@ const Resume = () => {
           <Intro title="Resume." subtitle="Find a summary of my life, the professional part."  />
           <section>
             <div className="container px-5 py-16 mx-auto flex flex-wrap flex-col">
-              <div className="flex mx-auto mb-10">
+              <div className="flex mx-auto">
                 <a onClick={()=>setSection(0)} className={useSection == 0 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base}>
                   <p className='pl-2 inline-flex'>Experience</p>
                 </a>
@@ -42,7 +42,9 @@ const Resume = () => {
                     <p className='pl-2 inline-flex'>Education</p>
                 </a>
               </div>
-              {useSection === 0 ? maperinho(A) : useSection === 1 ? maperinho(B) : maperinho(C)}
+              <div className="bg-black">
+                {useSection === 0 ? maperinho(A) : useSection === 1 ? maperinho(B) : maperinho(C)}
+              </div>
             </div>
           </section>
         </Container>
