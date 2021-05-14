@@ -1,12 +1,22 @@
-import React, {useState} from "react"
+import React, {ReactComponentElement, useState} from "react"
 import Container from '../components/container'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Head from 'next/head'
 import { NAME } from '../lib/constants'
 
+const maperinho = (el:string[]) => {
+  return(
+    <h1>{el[0]}</h1>
+  )
+}
+
 const Resume = () => {
-  const [useVariable, setVariable] = useState(0)
+  const [useSection, setSection] = useState(0)
+
+  const A :string[] = ["Experience!"]
+  const B :string[] = ["Tech Stack!"]
+  const C :string[] = ["Education!"]
 
   const base = `px-6 py-3 w-1/2 w-auto justify-center 
   justify-start border-b-2 title-font font-medium inline-flex items-center 
@@ -23,16 +33,17 @@ const Resume = () => {
           <section>
             <div className="container px-5 py-16 mx-auto flex flex-wrap flex-col">
               <div className="flex mx-auto mb-10">
-                <a onClick={()=>setVariable(0)} className={useVariable == 0 ? base + ' border-yellow-500 rounded-t bg-black text-yellow-500' : base}>
+                <a onClick={()=>setSection(0)} className={useSection == 0 ? base + ' border-yellow-500 rounded-t bg-black text-yellow-500' : base}>
                     <p className='pl-2 inline-flex'>Experience</p>
                 </a>
-                <a onClick={()=>setVariable(1)} className={useVariable == 1 ? base + ' border-yellow-500 rounded-t bg-black text-yellow-500' : base}>
+                <a onClick={()=>setSection(1)} className={useSection == 1 ? base + ' border-yellow-500 rounded-t bg-black text-yellow-500' : base}>
                     <p className='pl-2 inline-flex'>Tecnology</p>
                 </a>
-                <a onClick={()=>setVariable(2)} className={useVariable == 2 ? base + ' border-yellow-500 rounded-t bg-black text-yellow-500' : base}>
+                <a onClick={()=>setSection(2)} className={useSection == 2 ? base + ' border-yellow-500 rounded-t bg-black text-yellow-500' : base}>
                     <p className='pl-2 inline-flex'>Education</p>
                 </a>
               </div>
+              {useSection === 0 ? maperinho(A) : useSection === 1 ? maperinho(B) : maperinho(C)}
             </div>
           </section>
         </Container>
@@ -42,24 +53,3 @@ const Resume = () => {
 }
 
 export default Resume
-// working menu from another project, for reference.
-// {useVariable >= 2 ? useVariable == 2 ? maperinho(C) : maperinho(D) : useVariable == 0 ? maperinho(A) : maperinho(B) }
-// const maperinho = (el) => {
-//   return el.map(e => {
-//     return (
-//       <div className="grid" key={e}>
-//         <h3 className='mt-4 m-auto font-serif italic font-bold tracking-tighter leading-none text-4xl text-red-700'>{e[0]}</h3>
-//         <p className='m-auto font-mono tracking-tighter '>{e[1]}</p>
-//         <div className='w-10/12 m-auto grid grid-cols-1 lg:grid-cols-2'>
-//           {e[2].map(ea => {
-//               if(Array.isArray(ea.price)){
-//                 return <PizzaCard key={ea.name + ea.content} name={ea.name} content={ea.content} price={ea.price}/>
-//               }
-//               return <Card key={ea.name + ea.content} name={ea.name} content={ea.content} price={ea.price}/>
-//             })
-//           }
-//         </div>
-//       </div>
-//     )
-//   });
-// }
