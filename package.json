@@ -45,7 +45,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "postcss": "^8.2.4",
     "prettier": "^1.19.1",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.1.2"
   },
   "license": "MIT"
 }
