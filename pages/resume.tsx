@@ -32,8 +32,8 @@ const Resume = () => {
           <section>
             <div className="container px-5 py-16 mx-auto flex flex-wrap flex-col">
               <div className="flex mx-auto mb-10">
-                <a onClick={()=>setSection(0)} className={useSection == 0 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base}>
-                    Experience
+                <a onClick={()=>setSection(0)} >
+                  <p className={useSection == 0 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base} >Experienc</p>
                 </a>
                 <a onClick={()=>setSection(1)} className={useSection == 1 ? cn(base, 'border-yellow-500 bg-black text-yellow-500') : base}>
                     <p className='pl-2 inline-flex'>Tecnolog</p>
