@@ -6,6 +6,12 @@ import Head from 'next/head'
 import { NAME } from '../lib/constants'
 import cn from "classnames"
 
+const base = cn(`px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`)
+
+const EXP :string[] = ["Experience!"]
+const SKILL :string[] = ["Tech Stack!"]
+const EDU :string[] = ["Education!"]
+
 const maperinho = (el:string[]) => {
   return(
     <h1>{el[0]}</h1>
@@ -14,12 +20,6 @@ const maperinho = (el:string[]) => {
 
 const Resume = () => {
   const [useSection, setSection] = useState(0)
-
-  const A :string[] = ["Experience!"]
-  const B :string[] = ["Tech Stack!"]
-  const C :string[] = ["Education!"]
-
-  const base = cn(`px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`)
   
   return (
     <>
@@ -43,7 +43,7 @@ const Resume = () => {
                 </a>
               </div>
               <div className="bg-black">
-                {useSection === 0 ? maperinho(A) : useSection === 1 ? maperinho(B) : maperinho(C)}
+                {useSection === 0 ? maperinho(EXP) : useSection === 1 ? maperinho(SKILL) : maperinho(EDU)}
               </div>
             </div>
           </section>

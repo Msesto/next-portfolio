@@ -49,7 +49,7 @@ export default function Example() {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <Link href={item.href}>
+                      <Link key={item.href} href={item.href}>
                         <a
                           key={item.name}
                           className={classNames(
@@ -71,7 +71,7 @@ export default function Example() {
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <Link href={item.href}>
+                <Link key={item.href} href={item.href}>
                   <a
                     key={item.name}
                     className={classNames(
