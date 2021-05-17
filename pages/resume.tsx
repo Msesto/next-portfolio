@@ -8,13 +8,28 @@ import cn from "classnames"
 
 const base = cn(`px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`)
 
-const EXP :string[] = ["Experience!"]
-const SKILL :string[] = ["Tech Stack!"]
-const EDU :string[] = ["Education!"]
+interface IPart {
+  title: string;
+  sections: string[][];
+}
 
-const maperinho = (el:string[]) => {
+const EXP :IPart = {title: "Experience!", sections: [["React", "Awesome"], ["React", "Awesome"], ["React", "Awesome"], ["React", "Awesome"]]}
+const SKILL :IPart = {title: "Tech Stack!", sections: [["Golang", "Beautiful"], ["Golang", "Beautiful"], ["Golang", "Beautiful"], ["Golang", "Beautiful"]]}
+const EDU :IPart = {title: "Education!", sections: [["Education", "is the only way to a future."], ["Education", "is the only way to a future."], ["Education", "is the only way to a future."]]}
+
+const maperinho = (el:IPart) => {
   return(
-    <h1>{el[0]}</h1>
+    <div>
+      <h1>{el.title}</h1>
+      {el.sections.map(e => 
+      (
+      <>
+        <h3>{e[0]}</h3>
+        <p>{e.slice(1)}</p>
+      </>
+      )
+      )}
+    </div>
   )
 }
 
