@@ -51,8 +51,8 @@ const Contact = () => {
           <title> Contact Form </title>
       </Head>
       <Container>
-        <section className={cn``}>
         <Intro title="Contact form." subtitle={`If the form isn't working, email me at: ${<span className="select-all cursor-pointer"><em>sesto@outlook.com</em></span>}`}></Intro>
+         <section className="mb-20">
           <h3 className={cn`mt-6 leading-tight text-3xl`}>Submit a contact form</h3>
           <p className={cn`ml-4 leading-none font-light text-sm`}>If the form isn't working, email me at: <span className={cn`select-all cursor-pointer`}><em>sesto@outlook.com</em></span></p>
           <form className={cn`items-center flex flex-col`} onSubmit={handleOnSubmit}>
@@ -68,15 +68,14 @@ const Contact = () => {
               <label className={cn`mt-6 block text-lg font-medium`}>Message:</label>
               <textarea className={cn`text-lg md:mt-1 text-gray-700 mb-1 md:mb-4 h-24 p-2 rounded w-full`} name="message" placeholder="Enter your message"></textarea>
             </div>
-            <button className={cn`p-2 w-1/3 text-2xl md:text-4xl font-medium text-white rounded-md border border-white bg-accent-3 mt-6`} type="submit" disabled={serverState.submitting}>
-              Submit
-            </button>
+              <button className={cn`p-2 w-1/3 text-2xl md:text-4xl font-medium text-white rounded-md border border-white bg-accent-3 mt-6`} type="submit" disabled={serverState.submitting}>
+                Submit
+              </button>
             {serverState.status && (<p className={!serverState.status.ok ? "errorMsg" : ""}>{serverState.status.msg}</p>)}
           </form>
         </section>
       </Container>
     </Layout>
-
   )
 }
 

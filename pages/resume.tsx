@@ -61,7 +61,6 @@ const Resume = () => {
   const [useSection, setSection] = useState(0)
   
   return (
-    <>
       <Layout>
         <Head>
           <title>{NAME}'s Resume</title>
@@ -91,7 +90,6 @@ const Resume = () => {
           </section>
         </Container>
       </Layout>
-    </>
   )
 }
 
