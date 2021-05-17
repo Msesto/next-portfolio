@@ -8,6 +8,9 @@ body {
   @apply overflow-visible;
 } */
 /* @apply min-h-screen; */
+a {
+  @apply cursor-pointer;
+}
 
 @keyframes BGgradient {
   0% {
