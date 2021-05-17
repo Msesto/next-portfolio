@@ -1,0 +1,53 @@
+// import DateFormatter from './date-formatter'
+// import Link from 'next/link'
+import React from "react"
+import {FaAngleDown, FaTimes} from "react-icons/fa"
+
+type Props = {
+  title: string
+  // date: string
+  // excerpt: string
+  sections: string[][]
+}
+
+const Tab = ({
+  title,
+  // date,
+  // excerpt,
+  sections,
+}: Props) => {
+  return (
+    <section>
+      <h3 className='text-6xl'>{title}</h3>
+      { sections.map(e => 
+        <Drop e={e} />
+      )}
+    </section>
+  )
+}
+
+type DProps = {
+  e: string[]
+}
+
+const Drop = ({e}:DProps) => {
+  const [useOpen, setOpen] = React.useState(false)
+  return(
+    <div>
+      <div className="flex justify-between">
+        <h3 className="text-4xl">{e[0]}</h3>
+        <a onClick={() => setOpen(!useOpen)}>
+          {useOpen ? 
+          <FaTimes className="text-3xl text-yellow-500"/>
+          :
+          <FaAngleDown className="text-3xl"/>
+          } 
+        </a>
+      </div>
+      {useOpen ? <p>e[0]</p> : null}
+    </div>
+
+  )
+}
+
+export default Tab

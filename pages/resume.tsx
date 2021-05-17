@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 import { NAME } from '../lib/constants'
 import cn from "classnames"
+import Tab from "../components/resume-tab"
 
 const base = cn(`px-6 py-3 w-1/2 w-auto justify-center justify-start border-b-2 title-font font-medium inline-flex items-center leading-none border-gray-200 tracking-wide md:tracking-widest text-lg md:text-xl rounded-t`)
 
@@ -19,17 +20,7 @@ const EDU :IPart = {title: "Education!", sections: [["Education", "is the only w
 
 const maperinho = (el:IPart) => {
   return(
-    <div>
-      <h1>{el.title}</h1>
-      {el.sections.map(e => 
-      (
-      <>
-        <h3>{e[0]}</h3>
-        <p>{e.slice(1)}</p>
-      </>
-      )
-      )}
-    </div>
+    <Tab title={el.title} sections={el.sections} />
   )
 }
 
