@@ -18,7 +18,7 @@ const Tab = ({
 }: Props) => {
   return (
     <section>
-      <h3 className='text-6xl'>{title}</h3>
+      <h3 className='text-2xl'>{title}</h3>
       { sections.map(e => 
         <Drop e={e} />
       )}
@@ -33,8 +33,8 @@ type DProps = {
 const Drop = ({e}:DProps) => {
   const [useOpen, setOpen] = React.useState(false)
   return(
-    <div>
-      <div className="flex justify-between">
+    <div className="">
+      <div className="flex justify-between p-2">
         <h3 className="text-4xl">{e[0]}</h3>
         <a onClick={() => setOpen(!useOpen)}>
           {useOpen ? 
@@ -44,7 +44,7 @@ const Drop = ({e}:DProps) => {
           } 
         </a>
       </div>
-      {useOpen ? <p>e[0]</p> : null}
+      {useOpen ? <p> {e[1]} </p> : null}
     </div>
 
   )
