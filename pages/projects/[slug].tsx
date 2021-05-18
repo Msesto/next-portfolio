@@ -7,7 +7,7 @@ import Layout from '../../components/layout'
 import { getProjectBySlug, getAllProjects } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
+import { NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import ProjectType from '../../types/project'
 
@@ -32,7 +32,7 @@ const Project = ({ project, moreProjects, preview }: Props) => {
             <article className="mb-32">
               <Head>
                 <title>
-                  {project.title} | Next.js Blog Example with {CMS_NAME}
+                  {project.title} | {NAME}'s Projects
                 </title>
                 <meta property="og:image" content={project.ogImage.url} />
               </Head>
