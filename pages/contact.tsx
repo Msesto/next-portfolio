@@ -53,8 +53,6 @@ const Contact = () => {
       <Container>
         <Intro title="Contact form." subtitle={`If the form isn't working, email me at:`} innerHTML={['select-all cursor-pointer', '<em>sesto@outlook.com</em>']} />
          <section className="mb-20">
-          <h3 className={cn`mt-6 leading-tight text-3xl`}>Submit a contact form</h3>
-          <p className={cn`ml-4 leading-none font-light text-sm`}>If the form isn't working, email me at: <span className={cn`select-all cursor-pointer`}><em>sesto@outlook.com</em></span></p>
           <form className={cn`items-center flex flex-col`} onSubmit={handleOnSubmit}>
             <div className={cn`w-2/3 flex-shrink-0 mt-2`}>
               <label className={cn`mt-12 block text-lg font-medium`}>Email address:</label>
