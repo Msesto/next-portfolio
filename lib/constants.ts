@@ -5,6 +5,32 @@ export interface IPart {
 }
 
 // secont item in each section must be JSX, since the component consumes it as innerHTML (Security implications for this type of site are null).
+export const EXP :IPart = {title: "Log of every professional job I had and a summary of each.", 
+  sections: [
+    ["Web Developer, Freelance.", `
+    <h4 class="text-2xl font-bold text-white text-opacity-60"> 2021 &rarr; </h4>
+    <ul class="list-disc p-1 pl-3 text-sm md:text-lg">
+      <li> Working with TS/React and Golang </li>
+      <li> Projects will be added to the projects page </li>
+      <li> I'd like to add that working on random jobs has given me more troubleshooting skills </li>
+    </ul>
+      `],
+    ["SUR Analyst, OSPLAD.", `
+    <h4 class="text-2xl font-bold text-white text-opacity-60"> 2018 - 2021 </h4>
+    <ul class="list-disc p-1 pl-3 text-sm md:text-lg">
+      <li> Administrative tasks, such as organizing all the billing for expensive medication, as well as auditing it, and making the files to send </li>
+      <li> During the pandemic, I was the only one from my team to keep going and did my best to keep the flow, until my resignation </li>
+      <li> Mainly got the gist of working with multiple teams of different types of professionals and be able to negotiate to reach a mutual ground </li>
+    </ul>
+    `], 
+    ["Tech Support, NewCar Group.", `
+    <h4 class="text-2xl font-bold text-white text-opacity-60"> 2017 - 2018 </h4>
+    <ul class="list-disc p-1 pl-3 text-sm md:text-lg">
+      <li> Maintained the work computers, printers and installed AP to reach places that didn't have wi-fi </li>
+      <li> Helped other employees to maximize their use of office software </li>
+    </ul>
+    `],
+]}
 
 export const SKILL :IPart = {title: "Log of every technology I've learnt and used, from most experienced to least.", 
   sections: [
@@ -20,6 +46,7 @@ export const SKILL :IPart = {title: "Log of every technology I've learnt and use
     ["Linux", `<p class="p-1 pb-0 text-base md:text-lg">Basic knowledge, lately I've been developing on WSL2 for most of my work.</p>`], 
     ["Bash", `<p class="p-1 pb-0 text-base md:text-lg">Basic knowledge, mainly using ZSH.</p>`],
 ]}
+
 export const EDU :IPart = {title: "Log of every course I've done, from most serious to chilled workshops and books.", 
   sections: [
     ["Informatics Engineering, University of Buenos Aires", `
