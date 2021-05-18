@@ -5,15 +5,11 @@ import {FaAngleDown, FaTimes} from "react-icons/fa"
 
 type Props = {
   title: string
-  // date: string
-  // excerpt: string
   sections: string[][]
 }
 
 const Tab = ({
   title,
-  // date,
-  // excerpt,
   sections,
 }: Props) => {
   return (
@@ -45,7 +41,7 @@ const Drop = ({e, i}:DProps) => {
           } 
         </a>
       </div>
-      {useOpen ? <p> {e[1]} </p> : null}
+      {useOpen ? e[1] ? <div className="p-1 pl-6 tracking-tight leading-none text-lg" dangerouslySetInnerHTML={{__html: e[1]}} /> : null : null}
     </div>
 
   )
