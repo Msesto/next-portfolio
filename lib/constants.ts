@@ -34,13 +34,13 @@ export const EXP :IPart = {title: "Log of every professional job I had and a sum
 
 export const SKILL :IPart = {title: "Log of every technology I've learnt and used, from most experienced to least.", 
   sections: [
-    ["JavaScript/TypeScript", `<p class="p-1 pb-0 text-base md:text-lg">The language I've most experience and knowledge of.</p>`], 
+    ["JavaScript & TypeScript", `<p class="p-1 pb-0 text-base md:text-lg">The language I've most experience and knowledge of.</p>`], 
     ["React", `<p class="p-1 pb-0 text-base md:text-lg">Did over 100 hours of workshops about react, can make custom hooks, understand compound components and so on.</p>`],
     ["NodeJS", `<p class="p-1 pb-0 text-base md:text-lg">Mainly Express.JS to make CRUD API's, with MongoDB, JWT, and other middlewares.</p>`],
     ["Golang", `<p class="p-1 pb-0 text-base md:text-lg">This is what I've been spending most of my recent time on, right now I've a grab onto all Next, so most of my fron-end's are built using Next.</p>`], 
     ["NoSQL (MongoDB)", `<p class="p-1 pb-0 text-base md:text-lg">CRUD operations, also experience with Mongo's Atlas (their cloud offering).</p>`],
     ["SQL (PostgreSQL)", `<p class="p-1 pb-0 text-base md:text-lg">CRUD operations, still need to put more work to have a better understanding.</p>`],
-    ["Git/GitHub/GitLab", `<p class="p-1 pb-0 text-base md:text-lg">Most of the basic principles, working on a GitLab certification at the moment.</p>`], 
+    ["Git/GitHub & GitLab", `<p class="p-1 pb-0 text-base md:text-lg">Most of the basic principles, working on a GitLab certification at the moment.</p>`], 
     ["AWS", `<p class="p-1 pb-0 text-base md:text-lg">Did a serverless course using Amplify, experience with EC2, Route 53, Buckets, CloudFront and a few more services.</p>`],
     ["Python", `<p class="p-1 pb-0 text-base md:text-lg">Basic knowledge.</p>`],
     ["Linux", `<p class="p-1 pb-0 text-base md:text-lg">Basic knowledge, lately I've been developing on WSL2 for most of my work.</p>`], 
